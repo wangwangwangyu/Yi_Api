@@ -1,20 +1,21 @@
 ------------------------------------------------------------------------------------------
-Ñ§³µ¼¼ÇÉÁĞ±í
-ÇëÇóµØÖ·: 
+å­¦è½¦æŠ€å·§åˆ—è¡¨
+è¯·æ±‚åœ°å€: 
 http:// http://mp.whrango.com/api/skill/skill_list
-ÇëÇó²ÎÊı:
-page  Ò³Âë
-pageSize Ã¿Ò³ÌõÊı
-·µ»Ø½á¹¹:
+è¯·æ±‚å‚æ•°:
+cate_id  æ–‡ç« åˆ†ç±»
+page  é¡µç 
+pageSize æ¯é¡µæ¡æ•°
+è¿”å›ç»“æ„:
 {
   "code": 200,
-  "data": ,ÁĞ±íĞÅÏ¢
-"count": ,ÎÄÕÂÊıÁ¿
+  "data": ,åˆ—è¡¨ä¿¡æ¯
+"count": ,æ–‡ç« æ•°é‡
 "msg": , 
 }
-//codeËµÃ÷¡£200ÇëÇó³É¹¦£¬404Î´ÕÒµ½Êı¾İ£¬401 ·Ç·¨ÇëÇó
-Ê¾Àı£º{
-    "msg": "Ñ§³µ¼¼ÇÉ",
+//codeè¯´æ˜ã€‚200è¯·æ±‚æˆåŠŸï¼Œ404æœªæ‰¾åˆ°æ•°æ®ï¼Œ401 éæ³•è¯·æ±‚
+ç¤ºä¾‹ï¼š{
+    "msg": "å­¦è½¦æŠ€å·§",
     "data": [
         {
             "id": 1,
@@ -43,31 +44,31 @@ pageSize Ã¿Ò³ÌõÊı
 }
 -----------------------------------------------------------------------------------------
 
-Ñ§³µ¼¼ÇÉÏêÇé
-ÇëÇóµØÖ·: 
+å­¦è½¦æŠ€å·§è¯¦æƒ…
+è¯·æ±‚åœ°å€: 
 http:// http://mp.whrango.com/api/skill/skill
-ÇëÇó²ÎÊı:
-skill_id  ÎÄÕÂID
-·µ»Ø½á¹¹:
+è¯·æ±‚å‚æ•°:
+skill_id  æ–‡ç« ID
+è¿”å›ç»“æ„:
 {
   "code": 200,
   "data": , 
 "msg": ,
 }
-Ê¾Àı
+ç¤ºä¾‹
 {
-    "msg": "Ñ§³µ¼¼ÇÉÏêÇé",
+    "msg": "å­¦è½¦æŠ€å·§è¯¦æƒ…",
     "data": {
         "id": 2,
         "cate_id": 2,
-        "title": "Á·³µ¼¼ÇÉ",
-        "title_sub": "Á·³µ¼¼ÇÉ1",
+        "title": "ç»ƒè½¦æŠ€å·§",
+        "title_sub": "ç»ƒè½¦æŠ€å·§1",
         "title_color": null,
         "url": null,
         "thumb": "/storage/201810/22/59057729ad734e73aeea442f13b6605a.jpeg",
         "thumbs": null,
         "click": 0,
-        "body": "&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/storage/201810/22/fcc9ef79940502a87c5cba5b1fcc4abb.jpeg&quot; style=&quot;height:56px; width:100px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Á·³µ¼¼ÇÉ&lt;/p&gt;",
+        "body": "&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/storage/201810/22/fcc9ef79940502a87c5cba5b1fcc4abb.jpeg&quot; style=&quot;height:56px; width:100px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;ç»ƒè½¦æŠ€å·§&lt;/p&gt;",
         "keywords": null,
         "description": null,
         "sort": 500,
