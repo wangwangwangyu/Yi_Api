@@ -36,8 +36,6 @@ pageSize 每页条数
             "author": null,
             "created_at": "1539704251",
             "updated_at": "1540172756",
-           "created_time": "2018-10-15 10:42:35",
-            "updated_time": "2018-10-15 21:24:23"
             "is_show": 1,
             "is_stick": 0
         }
@@ -79,15 +77,13 @@ skill_id  文章ID
         "author": null,
         "created_at": "1540171629",
         "updated_at": "1540172745",
-      "created_time": "2018-10-15 10:42:35",
-            "updated_time": "2018-10-15 21:24:23"
         "is_show": 1,
         "is_stick": 0
     },
     "code": 200
 }
 //--------------------------------------------------------------------------------------------------
-学车技巧列表
+练习场列表
 请求地址: 
 http:// http://mp.whrango.com/api/plade/plade_list
 //data中"distance"为练习场和学员之间的距离km
@@ -211,9 +207,280 @@ plade_id  练习场ID
         "zoom": 18,
         "is_show": 1,
         "thumb": "http://mp.whrango.com/storage/201810/23/7fa9659fc66be084205ce089fe436a1d.jpeg",
-        "created_time": "2018-10-15 10:42:35",
-        "updated_time": "2018-10-23 12:02:44"
     },
     "code": 200
 }
+//-----------------------------------------------------------------------------------------
+学车套餐列表
+请求地址: 
+http:// http://mp.whrango.com/api/meal/meal_list
+请求参数:
+page  页码
+pageSize 每页条数
+返回结构:
+{
+  "code": 200,
+  "data": ,列表信息
+"count": ,文章数量
+"msg": , 
+}
+//code说明。200请求成功，404未找到数据，401 非法请求
+示例：{
+    "msg": "学车套餐",
+    "data": [
+        {
+            "id": 2,
+            "title": "套餐2",
+            "subtitle": "vfdvf",
+            "thumb": "http://mp.whrango.com/storage/201810/15/d40d13bbceffb3132460f52833b04efa.jpeg",
+            "price": 33333,
+            "commission": 332,
+            "body": "efvefvf",
+            "created_at": "1539574657",
+            "updated_at": "1539609817",
+            "is_show": 1,
+            "sort": 500,
+          
+        },
+        {
+            "id": 3,
+            "title": "套餐3",
+            "subtitle": "vfdvf",
+            "thumb": "http://mp.whrango.com/storage/201810/15/d40d13bbceffb3132460f52833b04efa.jpeg",
+            "price": 3333,
+            "commission": 333,
+            "body": "efvefvf",
+            "created_at": "1539574657",
+            "updated_at": "1539609817",
+            "is_show": 1,
+            "sort": 500,
+           
+        }
+    ],
+    "count": 5,
+    "code": 200
+}
+//-----------------------
+学车套餐详情
+请求地址: 
+http:// http://mp.whrango.com/api/meal/meal
+请求参数:
+meal_id  套餐ID
+返回结构:
+{
+  "code": 200,
+  "data": , 
+"msg": ,
+}
+示例:
+{
+    "msg": "套餐详情",
+    "data": {
+        "id": 1,
+        "title": "套餐1",
+        "subtitle": "测试1",
+        "thumb": "http://mp.whrango.com/storage/201810/15/087667b01cbbacf8889b2e638c98a282.jpeg",
+        "price": 1111,
+        "commission": 22,
+        "body": "<p>的程度CDC</p>\r\n\r\n<p style=\"text-align:center\"><img alt=\"\" src=\"/storage/201810/15/c3a40fd36bb61c8f3eb6afe970a473b0.jpeg\" style=\"height:427px; width:500px\" /></p>\r\n\r\n<p style=\"text-align:center\">挺好的地方</p>",
+        "created_at": "1539573711",
+        "updated_at": "1539574070",
+        "is_show": 1,
+        "sort": 500,
+    },
+    "code": 200
+}
+//-----------------------------------------------------------------------------------------
+页面单个banner
+请求地址: 
+http:// http://mp.whrango.com/api/banner/banner
+请求参数:
+ 按分类cate_id 
+// 4 平台首页banner，5学员注册，6平台登陆，7学员登陆，8学员找回密码，9学车流程，10常见问题，11安全保障
+返回结构:
+{
+  "code": 200,
+  "data": ,列表信息
+"count": ,文章数量
+"msg": , 
+}
+//code说明。200请求成功，404未找到数据，401 非法请求
+示例：
+{
+    "data": {
+        "id": 11,
+        "cate_id": 9,
+        "title": "index",
+        "url": "#",
+        "target": "_self",
+        "thumb": "http://mp.whrango.com/storage/201810/24/1f114ab8642c589347d99ed229d086b6.jpeg",
+        "sort": 50,
+        "created_at": "2018-10-23 10:52:42",
+        "updated_at": "2018-10-24 16:04:36",
+        "is_show": 1
+    },
+    "code": 200,
+    "count": 1,
+  }
+ 2页面单个banner
+页面单个banner
+请求地址: 
+http:// http://mp.whrango.com/api/banner/_banner
+请求参数:
+banner_id 
+// 4 平台首页banner，5学员注册，6平台登陆，7学员登陆，8学员找回密码，9学车流程，10常见问题，11安全保障
+返回结构:
+{
+  "code": 200,
+  "data": ,列表信息
+"count": ,文章数量
+"msg": , 
+}
+//code说明。200请求成功，404未找到数据，401 非法请求
+示例：
+{
+    "data": {
+        "id": 11,
+        "cate_id": 9,
+        "title": "index",
+        "url": "#",
+        "target": "_self",
+        "thumb": "http://mp.whrango.com/storage/201810/24/1f114ab8642c589347d99ed229d086b6.jpeg",
+        "sort": 50,
+        "created_at": "2018-10-23 10:52:42",
+        "updated_at": "2018-10-24 16:04:36",
+        "is_show": 1
+    },
+    "code": 200,
+    "count": 1,
+  }
+//-----------------------
+关于我们
+请求地址: 
+http:// http://mp.whrango.com/api/about/about
+请求参数:
 
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+//code说明。200请求成功，404未找到数据，401 非法请求
+示例：
+{
+    "data": {
+        "id": 13,
+        "cate_id": 6,
+        "title": "关于我们",
+        "title_sub": null,
+        "title_color": null,
+        "url": "/about",
+        "thumb": "http://mp.whrango.com",
+        "thumbs": null,
+        "click": 0,
+        "body": "<p>关于我们</p>",
+        "keywords": null,
+        "description": null,
+        "sort": 500,
+        "exattr": "null",
+        "author": null,
+        "created_at": "2018-10-23 10:23:19",
+        "updated_at": "2018-10-23 10:23:19",
+        "is_show": 1,
+        "is_stick": 0
+    },
+    "code": 200,
+    "msg": "关于我们",
+    "count": 1
+}
+//-----------------------
+保证协议
+请求地址: 
+http:// http://mp.whrango.com/api/agreement/agreement
+请求参数:
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+//code说明。200请求成功，404未找到数据，401 非法请求
+//-----------------------
+学车流程
+请求地址: 
+http:// http://mp.whrango.com/api/flow/flow
+请求参数:
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+//code说明。200请求成功，404未找到数据，401 非法请求
+//-----------------
+安全保障
+请求地址: 
+http:// http://mp.whrango.com/api/insurance/insurance
+请求参数:
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+//code说明。200请求成功，404未找到数据，401 非法请求
+//-----------------
+新闻列表
+请求地址: 
+http:// http://mp.whrango.com/api/news/news_list
+请求参数:
+
+page  页码
+pageSize 每页条数
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+//-----------------
+新闻详情
+请求地址: 
+http:// http://mp.whrango.com/api/news/news
+请求参数:
+
+news_id
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+
+"msg": , 
+}
+//-----------------
+常见问题列表
+请求地址: 
+http:// http://mp.whrango.com/api/question/questions
+请求参数:
+
+page  页码
+pageSize 每页条数
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
