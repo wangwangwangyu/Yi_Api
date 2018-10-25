@@ -1,4 +1,43 @@
 <?php
+学车技巧首页/分类页
+请求地址: 
+http:// http://mp.whrango.com/api/skill/skill_index
+请求参数:
+返回结构:
+{
+  "code": 200,
+  "data": ,列表信息
+"count": ,文章数量
+"msg": , 
+}
+
+{
+    "msg": "学车技巧分类",
+    "data": [
+        {
+            "id": 9,
+            "name_cn": "科目一",
+            "name_en": "subject_1"
+        },
+        {
+            "id": 10,
+            "name_cn": "科目二",
+            "name_en": "subject_2"
+        },
+        {
+            "id": 11,
+            "name_cn": "科目三",
+            "name_en": "subject_3"
+        },
+        {
+            "id": 12,
+            "name_cn": "科目四",
+            "name_en": "subject_4"
+        }
+    ],
+    "count": 4,
+    "code": 200
+}
 //code说明。200请求成功，404未找到数据，401 非法请求
 学车技巧列表
 请求地址: 
@@ -18,26 +57,21 @@ pageSize 每页条数
 示例：{
     "msg": "学车技巧",
     "data": [
+       {
+            "id": 5,
+            "title": "练车技巧5",
+            "title_sub": "练车技巧5",
+            "updated_at": "2018-10-23 10:23:49",
+            "thumb": "http://mp.whrango.com/storage/201810/22/59057729ad734e73aeea442f13b6605a.jpeg",
+            "cate_name": "科目一"
+        },
         {
-            "id": 1,
-            "cate_id": 2,
-            "title": "dscd",
-            "title_sub": "csdcdsc",
-            "title_color": null,
-            "url": null,
-            "thumb": "/storage/201810/19/57293918bf338a7b63a9139e61449c82.jpeg",
-            "thumbs": null,
-            "click": 0,
-            "body": "&lt;p&gt;cscsdcscdscsdcds&lt;/p&gt;",
-            "keywords": null,
-            "description": null,
-            "sort": 500,
-            "exattr": "null",
-            "author": null,
-            "created_at": "1539704251",
-            "updated_at": "1540172756",
-            "is_show": 1,
-            "is_stick": 0
+            "id": 6,
+            "title": "练车技巧6",
+            "title_sub": "练车技巧6",
+            "updated_at": "2018-10-23 10:23:49",
+            "thumb": "http://mp.whrango.com/storage/201810/22/59057729ad734e73aeea442f13b6605a.jpeg",
+            "cate_name": "科目一"
         }
     ],
     "count": 2,
@@ -60,25 +94,15 @@ skill_id  文章ID
 {
     "msg": "学车技巧详情",
     "data": {
-        "id": 2,
-        "cate_id": 2,
-        "title": "练车技巧",
-        "title_sub": "练车技巧1",
-        "title_color": null,
-        "url": null,
-        "thumb": "/storage/201810/22/59057729ad734e73aeea442f13b6605a.jpeg",
-        "thumbs": null,
-        "click": 0,
-        "body": "&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/storage/201810/22/fcc9ef79940502a87c5cba5b1fcc4abb.jpeg&quot; style=&quot;height:56px; width:100px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;练车技巧&lt;/p&gt;",
-        "keywords": null,
-        "description": null,
-        "sort": 500,
-        "exattr": "null",
+        "id": 18,
+        "title": "科目一10",
+        "title_sub": "科目一10科目一10科目一10科目一10",
+        "updated_at": "2018-10-24 11:10:36",
+        "thumb": "http://mp.whrango.com/storage/201810/23/7a8e0cb3435a62ff22aa0926aa059e65.jpeg",
+        "body": "",
         "author": null,
-        "created_at": "1540171629",
-        "updated_at": "1540172745",
-        "is_show": 1,
-        "is_stick": 0
+        "click": 0，
+        "cate_name": "科目一"
     },
     "code": 200
 }
@@ -101,65 +125,15 @@ lng 经度//111.123456
 示例：{
     "msg": "练习场列表",
     "data": [
-        {
-            "id": 7,
-            "name": "大大方方2",
-            "address_detail": "反对v发v地方",
-            "lng": "114.353939",
-            "lat": "30.585999",
-            "created_at": "1539571355",
-            "updated_at": "1540267364",
-            "zoom": 18,
-            "is_show": 1,
-            "thumb": "http://mp.whrango.com/storage/201810/23/7fa9659fc66be084205ce089fe436a1d.jpeg",
-            "distance": 0,
-            "created_time": "2018-10-15 10:42:35",
-            "updated_time": "2018-10-23 12:02:44"
-        },
-        {
-            "id": 3,
-            "name": "测试1",
-            "address_detail": "欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏欣赏下欣赏/r下",
-            "lng": "114.336085",
-            "lat": "30.547853",
-            "created_at": "1539571260",
-            "updated_at": "1539571459",
-            "zoom": 15,
-            "is_show": 1,
-            "thumb": "http://mp.whrango.com/storage/201810/23/7fa9659fc66be084205ce089fe436a1d.jpeg",
-            "distance": 4.57,
-            "created_time": "2018-10-15 10:41:00",
-            "updated_time": "2018-10-15 10:44:19"
-        },
-        {
-            "id": 4,
-            "name": "大大方方",
-            "address_detail": "反对v发v地方",
-            "lng": "114.316527",
-            "lat": "30.529811",
-            "created_at": "1539571355",
-            "updated_at": "1539609863",
-            "zoom": 17,
-            "is_show": 1,
-            "thumb": "http://mp.whrango.com/storage/201810/23/7fa9659fc66be084205ce089fe436a1d.jpeg",
-            "distance": 7.2,
-            "created_time": "2018-10-15 10:42:35",
-            "updated_time": "2018-10-15 21:24:23"
-        },
-        {
+       {
             "id": 5,
             "name": "嗡嗡嗡1",
             "address_detail": "反对v发v地方",
             "lng": "114.416527",
             "lat": "30.529811",
-            "created_at": "1539571355",
-            "updated_at": "1539609863",
             "zoom": 17,
-            "is_show": 1,
             "thumb": "http://mp.whrango.com/storage/201810/23/7fa9659fc66be084205ce089fe436a1d.jpeg",
             "distance": 8.66,
-            "created_time": "2018-10-15 10:42:35",
-            "updated_time": "2018-10-15 21:24:23"
         },
         {
             "id": 6,
@@ -167,14 +141,10 @@ lng 经度//111.123456
             "address_detail": "反对v发v地方",
             "lng": "114.416527",
             "lat": "30.829811",
-            "created_at": "1539571355",
-            "updated_at": "1539609863",
             "zoom": 17,
-            "is_show": 1,
             "thumb": "http://mp.whrango.com/storage/201810/23/7fa9659fc66be084205ce089fe436a1d.jpeg",
             "distance": 27.76,
-            "created_time": "2018-10-15 10:42:35",
-            "updated_time": "2018-10-15 21:24:23"
+      
         }
     ],
     "count": 5,
@@ -202,10 +172,7 @@ plade_id  练习场ID
         "address_detail": "反对v发v地方",
         "lng": "114.353939",
         "lat": "30.585999",
-        "created_at": "1539571355",
-        "updated_at": "1540267364",
         "zoom": 18,
-        "is_show": 1,
         "thumb": "http://mp.whrango.com/storage/201810/23/7fa9659fc66be084205ce089fe436a1d.jpeg",
     },
     "code": 200
@@ -228,34 +195,20 @@ pageSize 每页条数
 示例：{
     "msg": "学车套餐",
     "data": [
-        {
+       {
             "id": 2,
             "title": "套餐2",
             "subtitle": "vfdvf",
             "thumb": "http://mp.whrango.com/storage/201810/15/d40d13bbceffb3132460f52833b04efa.jpeg",
-            "price": 33333,
-            "commission": 332,
-            "body": "efvefvf",
-            "created_at": "1539574657",
-            "updated_at": "1539609817",
-            "is_show": 1,
-            "sort": 500,
-          
+            "price": 33333
         },
         {
             "id": 3,
             "title": "套餐3",
             "subtitle": "vfdvf",
             "thumb": "http://mp.whrango.com/storage/201810/15/d40d13bbceffb3132460f52833b04efa.jpeg",
-            "price": 3333,
-            "commission": 333,
-            "body": "efvefvf",
-            "created_at": "1539574657",
-            "updated_at": "1539609817",
-            "is_show": 1,
-            "sort": 500,
-           
-        }
+            "price": 3333
+        },
     ],
     "count": 5,
     "code": 200
@@ -276,17 +229,12 @@ meal_id  套餐ID
 {
     "msg": "套餐详情",
     "data": {
-        "id": 1,
-        "title": "套餐1",
-        "subtitle": "测试1",
-        "thumb": "http://mp.whrango.com/storage/201810/15/087667b01cbbacf8889b2e638c98a282.jpeg",
-        "price": 1111,
-        "commission": 22,
-        "body": "<p>的程度CDC</p>\r\n\r\n<p style=\"text-align:center\"><img alt=\"\" src=\"/storage/201810/15/c3a40fd36bb61c8f3eb6afe970a473b0.jpeg\" style=\"height:427px; width:500px\" /></p>\r\n\r\n<p style=\"text-align:center\">挺好的地方</p>",
-        "created_at": "1539573711",
-        "updated_at": "1539574070",
-        "is_show": 1,
-        "sort": 500,
+        "id": 3,
+        "title": "套餐3",
+        "subtitle": "vfdvf",
+        "thumb": "http://mp.whrango.com/storage/201810/15/d40d13bbceffb3132460f52833b04efa.jpeg",
+        "price": 3333,
+        "body": "<p>efvefvf</p>"
     },
     "code": 200
 }
@@ -295,65 +243,43 @@ meal_id  套餐ID
 请求地址: 
 http:// http://mp.whrango.com/api/banner/banner
 请求参数:
- 按分类cate_id 
-// 4 平台首页banner，5学员注册，6平台登陆，7学员登陆，8学员找回密码，9学车流程，10常见问题，11安全保障
 返回结构:
 {
   "code": 200,
-  "data": ,列表信息
+  "data": ,信息
 "count": ,文章数量
 "msg": , 
 }
 //code说明。200请求成功，404未找到数据，401 非法请求
 示例：
 {
-    "data": {
-        "id": 11,
-        "cate_id": 9,
-        "title": "index",
-        "url": "#",
-        "target": "_self",
-        "thumb": "http://mp.whrango.com/storage/201810/24/1f114ab8642c589347d99ed229d086b6.jpeg",
-        "sort": 50,
-        "created_at": "2018-10-23 10:52:42",
-        "updated_at": "2018-10-24 16:04:36",
-        "is_show": 1
-    },
+    "data": [
+        {
+            "id": 5,
+            "thumb": "http://mp.whrango.com/storage/201810/23/3a1b4d0437675e6ac09825566cb8877c.jpeg",
+            "cate_id": 3,
+            "title": "index",
+            "sort": 50
+        },
+        {
+            "id": 12,
+            "thumb": "http://mp.whrango.com/storage/201810/23/3a1b4d0437675e6ac09825566cb8877c.jpeg",
+            "cate_id": 3,
+            "title": "index",
+            "sort": 50
+        },
+        {
+            "id": 13,
+            "thumb": "http://mp.whrango.com/storage/201810/23/3a1b4d0437675e6ac09825566cb8877c.jpeg",
+            "cate_id": 3,
+            "title": "index",
+            "sort": 50
+        }
+    ],
     "code": 200,
-    "count": 1,
-  }
- 2页面单个banner
-页面单个banner
-请求地址: 
-http:// http://mp.whrango.com/api/banner/_banner
-请求参数:
-banner_id 
-// 4 平台首页banner，5学员注册，6平台登陆，7学员登陆，8学员找回密码，9学车流程，10常见问题，11安全保障
-返回结构:
-{
-  "code": 200,
-  "data": ,列表信息
-"count": ,文章数量
-"msg": , 
+    "count": 3,
+    "msg": "banner图"
 }
-//code说明。200请求成功，404未找到数据，401 非法请求
-示例：
-{
-    "data": {
-        "id": 11,
-        "cate_id": 9,
-        "title": "index",
-        "url": "#",
-        "target": "_self",
-        "thumb": "http://mp.whrango.com/storage/201810/24/1f114ab8642c589347d99ed229d086b6.jpeg",
-        "sort": 50,
-        "created_at": "2018-10-23 10:52:42",
-        "updated_at": "2018-10-24 16:04:36",
-        "is_show": 1
-    },
-    "code": 200,
-    "count": 1,
-  }
 //-----------------------
 关于我们
 请求地址: 
@@ -375,21 +301,8 @@ http:// http://mp.whrango.com/api/about/about
         "cate_id": 6,
         "title": "关于我们",
         "title_sub": null,
-        "title_color": null,
-        "url": "/about",
-        "thumb": "http://mp.whrango.com",
-        "thumbs": null,
-        "click": 0,
         "body": "<p>关于我们</p>",
-        "keywords": null,
-        "description": null,
-        "sort": 500,
-        "exattr": "null",
-        "author": null,
-        "created_at": "2018-10-23 10:23:19",
-        "updated_at": "2018-10-23 10:23:19",
-        "is_show": 1,
-        "is_stick": 0
+        "updated_at": "2018-10-23 10:23:19"
     },
     "code": 200,
     "msg": "关于我们",
@@ -408,7 +321,21 @@ http:// http://mp.whrango.com/api/agreement/agreement
 "count": ,文章数量
 "msg": , 
 }
-//code说明。200请求成功，404未找到数据，401 非法请求
+示例：
+{
+    "data": {
+        "id": 13,
+        "cate_id": 6,
+        "title": "保证协议",
+        "title_sub": null,
+        "body": "<p>xxx</p>",
+        "updated_at": "2018-10-23 10:23:19"
+    },
+    "code": 200,
+    "msg": "保证协议",
+    "count": 1
+}
+
 //-----------------------
 学车流程
 请求地址: 
@@ -422,7 +349,21 @@ http:// http://mp.whrango.com/api/flow/flow
 "count": ,文章数量
 "msg": , 
 }
-//code说明。200请求成功，404未找到数据，401 非法请求
+示例：
+{
+    "data": {
+        "id": 13,
+        "cate_id": 6,
+        "title": "学车流程",
+        "title_sub": null,
+        "body": "<p>xxx</p>",
+        "updated_at": "2018-10-23 10:23:19"
+    },
+    "code": 200,
+    "msg": "学车流程",
+    "count": 1
+}
+
 //-----------------
 安全保障
 请求地址: 
@@ -435,6 +376,20 @@ http:// http://mp.whrango.com/api/insurance/insurance
   "data": ,信息
 "count": ,文章数量
 "msg": , 
+}
+示例：
+{
+    "data": {
+        "id": 13,
+        "cate_id": 6,
+        "title": "安全保障",
+        "title_sub": null,
+        "body": "<p>xxx</p>",
+        "updated_at": "2018-10-23 10:23:19"
+    },
+    "code": 200,
+    "msg": "安全保障",
+    "count": 1
 }
 //code说明。200请求成功，404未找到数据，401 非法请求
 //-----------------
@@ -453,6 +408,28 @@ pageSize 每页条数
 "count": ,文章数量
 "msg": , 
 }
+示例：
+{
+    "msg": "新闻列表",
+    "data": [
+        {
+            "id": 20,
+            "title": "新闻",
+            "title_sub": "新闻xxx",
+            "updated_at": "2018-10-23 17:35:41",
+            "thumb": "http://mp.whrango.com/storage/201810/23/7a8e0cb3435a62ff22aa0926aa059e65.jpeg"
+        },
+        {
+            "id": 1,
+            "title": "新闻1",
+            "title_sub": "新闻1",
+            "updated_at": "2018-10-22 11:25:49",
+            "thumb": "http://mp.whrango.com/storage/201810/19/57293918bf338a7b63a9139e61449c82.jpeg"
+        }
+    ],
+    "count": 2,
+    "code": 200
+}
 //-----------------
 新闻详情
 请求地址: 
@@ -467,6 +444,20 @@ news_id
   "data": ,信息
 
 "msg": , 
+}
+{
+    "msg": "新闻详情",
+    "data": {
+        "id": 20,
+        "title": "新闻",
+        "title_sub": "新闻xxx",
+        "updated_at": "2018-10-23 17:35:41",
+        "thumb": "http://mp.whrango.com/storage/201810/23/7a8e0cb3435a62ff22aa0926aa059e65.jpeg",
+        "body": "xx",
+        "author": null,
+        "click": 0
+    },
+    "code": 200
 }
 //-----------------
 常见问题列表
@@ -483,4 +474,54 @@ pageSize 每页条数
   "data": ,信息
 "count": ,文章数量
 "msg": , 
+}
+示例：
+{
+    "msg": "常见问题列表",
+    "data": [
+        {
+            "id": 26,
+            "title": "一般多久可以拿证？",
+            "title_sub": null,
+            "body": ""
+        }
+    ],
+    "count": 9,
+    "code": 200
+}
+
+
+//-----------------
+首页导航
+请求地址: 
+http:// http://mp.whrango.com/api/nav/nav
+请求参数:
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+示例：
+{
+    "data": [
+        {
+            "id": 17,
+            "url": "http://mp.whrango.com/api/flow/flow",
+            "name": "学车流程",
+            "thumb": "http://mp.whrango.com/storage/201810/25/d52b67473111af94b5a5dc2205711c81.png"
+        },
+        {
+            "id": 18,
+            "url": "http://mp.whrango.com/api/insurance/insurance",
+            "name": "安全保障",
+            "thumb": null
+        },
+       
+    ],
+    "count": 5,
+    "code": 200,
+    "msg": "平台首页"
 }
