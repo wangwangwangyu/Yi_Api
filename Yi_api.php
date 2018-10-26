@@ -525,3 +525,207 @@ http:// http://mp.whrango.com/api/nav/nav
     "code": 200,
     "msg": "平台首页"
 }
+//-----------------
+用户添加订单
+请求地址: 
+http:// http://mp.whrango.com/api/user/make_order
+请求参数:
+meal_id 套餐*
+plade_id 练习场*
+user_id 用户*
+address 联系地址*
+phone   使用此套餐的人的电话*
+code   手机验证码*  //暂时没有
+school   就读学校
+name       使用此套餐的人的真实姓名*
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+示例：
+{
+    "data": "订单号:20181026854309",
+    "count": 0,
+    "code": 200,
+    "msg": "添加成功"
+}
+//-----------------
+用户中心订单列表，显示订单数的
+请求地址: 
+http:// http://mp.whrango.com/api/user/oeder_index
+请求参数:
+user_id 用户
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+示例：
+{
+    "msg": "订单信息",
+    "data": [
+        {
+            "total": 9,
+            "name": "待签约",
+            "status": 1
+        },
+        {
+            "total": 0,
+            "name": "待付款",
+            "status": 2
+        },
+        {
+            "total": 2,
+            "name": "报名成功",
+            "status": 3
+        },
+        {
+            "total": 0,
+            "name": "已经退款",
+            "status": 4
+        }
+    ],
+    "count": 4,
+    "code": 200
+}
+//-----------------
+用户订单列表页menu，
+请求地址: 
+http:// http://mp.whrango.com/api/user/order_menu
+请求参数:
+
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+示例：
+{
+    "msg": "订单信息",
+    "data": [
+        {
+            "name": "全部",
+            "status": 0
+        },
+        {
+            "name": "待签约",
+            "status": 1
+        },
+        {
+            "name": "待付款",
+            "status": 2
+        },
+        {
+            "name": "报名成功",
+            "status": 3
+        }
+    ],
+    "count": 4,
+    "code": 200
+}
+//-----------------
+用户订单列表页拉取列表，
+请求地址: 
+http:// http://mp.whrango.com/api/user/order_list
+请求参数:
+user_id
+status  0 全部，1 待签约，2 待付款 ，3 报名成功
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+示例：
+{
+    "msg": "订单信息",
+    "data": [
+        {
+            "id": 14,
+            "created_at": "2018-10-25 17:57:09",
+            "meal_title": "套餐3",
+            "meal_thumb": "http://mp.whrango.com/storage/201810/15/d40d13bbceffb3132460f52833b04efa.jpeg",
+            "meal_price": 3333,
+            "meal_subtitle": "vfdvf",
+            "serial": 20181025900445,
+            "agency_id": null
+        },
+        {
+            "id": 15,
+            "created_at": "2018-10-25 17:57:52",
+            "meal_title": "套餐3",
+            "meal_thumb": "http://mp.whrango.com/storage/201810/15/d40d13bbceffb3132460f52833b04efa.jpeg",
+            "meal_price": 3333,
+            "meal_subtitle": "vfdvf",
+            "serial": 20181025115164,
+            "agency_id": 3
+        },
+    ],
+    "count": 4,
+    "code": 200
+}
+//-----------------
+用户订单详情，
+请求地址: 
+http:// http://mp.whrango.com/api/user/order_info
+请求参数:
+user_id
+order_id
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+示例：
+{
+    "msg": "订单:20181025711267",
+    "data": [
+        {
+            "id": 17,
+            "user_id": 20,
+            "meal_id": 3,
+            "serial": 20181025711267,
+            "price": "3333.00",
+            "real_pay_money": null,
+            "pay_time": null,
+            "returned_money": null,
+            "status": 1,
+            "realname": "旺二哥",
+            "phone": 13895789658,
+            "code": "197388",
+            "plade_id": 7,
+            "address": "吴家湾",
+            "school": "华科",
+            "created_at": "2018-10-25 17:58:28",
+            "updated_at": "1540461508",
+            "agency_id": 3,
+            "meal_title": "套餐3",
+            "meal_thumb": "http://mp.whrango.com/storage/201810/15/d40d13bbceffb3132460f52833b04efa.jpeg",
+            "meal_price": 3333,
+            "meal_subtitle": "vfdvf",
+            "plade_name": "大大方方2",
+            "plade_address": "反对v发v地方",
+            "agency_name": "旺旺11",
+            "agency_phone": 12356522656,
+            "user_phone": 18888888888,
+            "user_nickName": "张锦飞🐲",
+            "user_realName": "飞哥"
+        }
+    ],
+    "code": 200
+}
