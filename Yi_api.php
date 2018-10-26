@@ -535,9 +535,10 @@ plade_id 练习场*
 user_id 用户*
 address 联系地址*
 phone   使用此套餐的人的电话*
-code   手机验证码*  //暂时没有
+sms_code   手机验证码*  
 school   就读学校
 name       使用此套餐的人的真实姓名*
+code   代理邀请码
 
 返回结构:
 {
@@ -728,4 +729,26 @@ order_id
         }
     ],
     "code": 200
+}
+//-----------------
+短信验证码，
+请求地址: 
+http:// http://mp.whrango.com/api/sms/make_code
+请求参数:
+user_id 用户id
+phone  用户电话
+
+返回结构:
+{
+  "code": 200,
+  "data": ,信息
+"count": ,文章数量
+"msg": , 
+}
+示例：
+
+    {
+    "count": 0,
+    "code": 200,
+    "msg": "发送成功注意查收！"
 }
