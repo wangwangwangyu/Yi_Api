@@ -752,3 +752,40 @@ phone  用户电话
     "code": 200,
     "msg": "发送成功注意查收！"
 }
+
+//-----------------
+用户发起支付
+请求地址: 
+http:// http://mp.whrango.com/api/user/pay_order
+请求参数:
+user_id 用户id
+order_id  订单号
+status  订单状态
+
+成功返回：
+{
+	{
+	    "appId": "wxeca0eddc17136a6a",
+	    "timeStamp": 1540648523,
+	    "nonceStr": "jdSValfs2r7P5ybn",
+	    "package": "prepay_id=wx2721552298465007ed99b8711790867757",
+	    "signType": "MD5",
+	    "paySign": "5BC157AD92239E6316CDBBDF5ED063F8"
+	}
+	 "code": 200
+
+失败返回：
+{
+	{
+	    "return_code": "SUCCESS",
+	    "return_msg": "OK",
+	    "appid": "wxeca0eddc17136a6a",
+	    "mch_id": "1510853781",
+	    "nonce_str": "RWFzgDFvt4iMjcsh",
+	    "sign": "3A075CFBDBE48CC0786EA1FEE0280D79",
+	    "result_code": "FAIL",
+	    "err_code": "INVALID_REQUEST",
+	    "err_code_des": "201 商户订单号重复"
+	}
+ "code": 201
+ }
