@@ -958,3 +958,47 @@ exam_id
     "code": 200,
     "msg": "预约成功"
 }
+
+学员的教练，
+请求地址: 
+http:// http://mp.whrango.com/api/user/user_coach
+user_id 
+
+返回结构:
+{
+	 "data":
+	"code": 200,
+    "msg": , 
+
+}
+示例：
+有数据返回：
+{
+    "data": {
+        "coach": {
+            "coach_2": {
+                "coach_id": 3,
+                "cate_name": "科目二教练",
+                "phone": 12567687666,
+                "name": "张1",
+                "gender": "女"
+            },
+            "coach_3": {
+                "coach_id": 4,
+                "cate_name": "科目三教练",
+                "phone": 66666666666,
+                "name": "张12",
+                "gender": "女"
+            }
+        },
+        "post_url": "http://mp.whrango.com/api/coach/coach_exercise"  //请求到教练的可预约的学车课程列表
+    },
+    "msg": "学员的教练",
+    "code": 200
+}
+没数据：
+{
+    "data": [],
+    "msg": "还没有教练",
+    "code": 200
+}
