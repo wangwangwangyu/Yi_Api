@@ -756,36 +756,205 @@ phone  用户电话
 //-----------------
 用户发起支付
 请求地址: 
-http:// http://mp.whrango.com/api/user/pay_order
+http:// http://mp.whrango.com/api/user/pay_trade
 请求参数:
-user_id 用户id
-order_id  订单号
-status  订单状态
+
+trade_id  订单号
+
 
 成功返回：
-{
+
 	{
-	    "appId": "wxeca0eddc17136a6a",
-	    "timeStamp": 1540648523,
-	    "nonceStr": "jdSValfs2r7P5ybn",
-	    "package": "prepay_id=wx2721552298465007ed99b8711790867757",
-	    "signType": "MD5",
-	    "paySign": "5BC157AD92239E6316CDBBDF5ED063F8"
-	}
-	 "code": 200
+    "config": {
+        "appId": "wxeca0eddc17136a6a",
+        "timeStamp": 1540863272,
+        "nonceStr": "8SmJxw9ICSK4ngw1",
+        "package": "prepay_id=wx300934323802175ab5e500993470496557",
+        "signType": "MD5",
+        "paySign": "CD10F2BCAFEEF508B55CBB83E711D119"
+    },
+    "code": 200
+}
+
 
 失败返回：
 {
-	{
-	    "return_code": "SUCCESS",
-	    "return_msg": "OK",
-	    "appid": "wxeca0eddc17136a6a",
-	    "mch_id": "1510853781",
-	    "nonce_str": "RWFzgDFvt4iMjcsh",
-	    "sign": "3A075CFBDBE48CC0786EA1FEE0280D79",
-	    "result_code": "FAIL",
-	    "err_code": "INVALID_REQUEST",
-	    "err_code_des": "201 商户订单号重复"
-	}
- "code": 201
- }
+    "config": {
+        "appId": "wxeca0eddc17136a6a",
+        "timeStamp": 1540863272,
+        "nonceStr": "8SmJxw9ICSK4ngw1",
+        "package": "prepay_id=wx300934323802175ab5e500993470496557",
+        "signType": "MD5",
+        "paySign": "CD10F2BCAFEEF508B55CBB83E711D119"
+    },
+    "code": 200
+}
+
+//-----------------
+意见反馈提交，
+请求地址: 
+http:// http://mp.whrango.com/api/user/guestbook_create
+请求参数:
+user_id 用户id
+body   留言内容
+
+返回结构:
+{
+  "code": 200,
+"msg": , 
+}
+示例：
+
+    {
+    "code": 200,
+    "msg": "留言成功"
+}
+
+
+//-----------------
+意见反馈页面，
+请求地址: 
+http:// http://mp.whrango.com/api/user/guestbook
+
+
+返回结构:
+{
+	"data"：’‘，
+  "code": 200,
+"msg": , 
+}
+示例：
+
+
+{
+    "data": {
+        "post_url": "http://mp.whrango.com/api/user/guestbook_create"
+    },
+    "code": 200,
+    "msg": "请求成功"
+}
+
+//-----------------
+取消体检预约，
+请求地址: 
+http:// http://mp.whrango.com/api/user/exam_del
+user_id 
+
+返回结构:
+{
+	
+  "code": 200,
+"msg": , 
+}
+示例：
+
+{
+    "code": 200,
+    "msg": "预约取消成功"
+}
+
+//-----------------
+学员体检预约首页，
+请求地址: 
+http:// http://mp.whrango.com/api/user/exam
+user_id 
+
+返回结构:
+{
+	
+  "code": 200,
+"msg": , 
+ "data":
+}
+示例：
+没有预约过
+{
+    "data": {
+        "post_url": "http://mp.whrango.com/api/user/exam_reserve", //提交预约选择班次页面
+        "msg": "未预约"
+    },
+    "code": "201",
+    "msg": "没有预约过"
+}
+有取消的预约
+{
+    "data": {
+        "post_url": "http://mp.whrango.com/api/user/exam_reserve",
+        "msg": "未预约"
+    },
+    "code": 201,
+    "msg": "预约已经取消"
+}
+有准备中的预约
+{
+    "data": {
+        "id": 1,
+        "time": "2018-01-18 00:00:00",
+        "address": "光谷广场",
+        "car_number": "aDSCDSCS",
+        "car_man": "CDSCSDC",
+        "car_phone": 15958927175,
+        "created_at": "1540824752",
+        "updated_at": "1540825295",
+        "post_url": "http://mp.whrango.com/api/user/exam_del", //删除预约
+        "msg": "预约中"
+    },
+    "code": 200,
+    "msg": "有正在装备的预约"
+}
+
+
+//-----------------reserve
+
+学员预约体检页面体捡班次选择，
+请求地址: 
+http:// http://mp.whrango.com/api/user/exam_reserve
+
+返回结构:
+{
+	
+  "code": 200,
+"msg": , 
+ "data":
+}
+{
+    "data": [
+        {
+            "id": 3,
+            "time": "2018-11-09 00:00",
+            "address": "光谷广场A",
+            "car_phone": 13866665555,
+            "car_number": "weweew",
+            "car_man": "werewrwer"
+        },
+        {
+            "id": 4,
+            "time": "2018-11-08 12:00",
+            "address": "光谷",
+            "car_phone": 18956523652,
+            "car_number": "鄂A198725",
+            "car_man": "形式上"
+        }
+    ],
+    "post_url": "http://mp.whrango.com/api/user/exam_create", //提交预约地址
+    "code": 200,
+    "msg": "有可选择的预约"
+}
+学员体检预约提交，
+请求地址: 
+http:// http://mp.whrango.com/api/user/exam_create
+user_id 
+exam_id 
+
+返回结构:
+{
+	
+  "code": 200,
+"msg": , 
+
+}
+示例：
+{
+    "code": 200,
+    "msg": "预约成功"
+}
