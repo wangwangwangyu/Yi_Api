@@ -1038,10 +1038,12 @@ http:// http://mp.whrango.com/api/agency/trade_list
     "count": 5,
     "code": 200
 }
+//--------------------------
 代理的确认签约，缴费
 请求地址: 
 http:// http://mp.whrango.com/api/agency/trade_list
 请求参数：
+         'code' => '代理的邀请码',
             'order_id' => '订单id',
             'status' => '订单状态',  2，签约完成，3，缴费完成
 
@@ -1056,5 +1058,130 @@ http:// http://mp.whrango.com/api/agency/trade_list
 {
    
     "msg": "编辑订单成功",
+    "code": 200
+}
+//——————————————————————
+代理主页订单数量显示
+请求地址: 
+http:// http://mp.whrango.com/api/agency/trade_menu
+请求参数：
+         'code' => '代理的邀请码',
+          
+
+返回结构:
+{
+
+	"code": 200,
+    "msg": , 
+    "data":
+
+}
+示例：
+{
+    "msg": "订单信息",
+    "data": {
+        "1": 9,
+        "2": 3
+    },
+    "code": 200  
+}
+
+//——————————————————————
+代理申请提现
+请求地址: 
+http:// http://mp.whrango.com/api/agency/cash_withdrawal
+请求参数：
+   支付宝：
+         'type' => '1', 1，支付宝，
+         'code' => '代理的邀请码',
+         'money' => '金额', //整数，24小时内限制3次
+         'payee' => '收款人',
+         'alipay' => '收款支付宝账号',
+   银行卡：      
+
+         'type' => '2', 2，银行卡
+         'code' => '代理的邀请码',
+         'money' => '金额', //整数，24小时内限制3次
+         'payee' => '收款人',
+         'card_number' => '收款卡号',
+         'bank' => '收款开户行',
+
+
+返回结构:
+{
+
+	"code": 200,
+    "msg": , 
+
+}
+示例：
+{
+
+	"code": 200,
+    "msg": , 
+
+}
+
+//——————————————————————
+代理申请中的申请
+请求地址: 
+http:// http://mp.whrango.com/api/agency/cash_wait
+请求参数：
+        
+         'code' => '代理的邀请码',
+返回结构:
+{
+
+	"code": 200,
+    "msg": , 
+    "data": , 
+
+}
+示例：
+{
+    "data": {
+        "id": 13,
+        "agency_id": 3,
+        "status": 1,
+        "payee": "ww",
+        "alipay": "12365rfrfr@qqq",
+        "type": 1,
+        "card_number": null,
+        "money": "104.00",
+        "created_at": "2018-10-31 15:35"
+    },
+    "msg": "申请中的提现",
+    "code": 200
+}
+//——————————————————————
+代理佣金记录
+请求地址: 
+http:// http://mp.whrango.com/api/agency/commission_history
+请求参数：
+        
+           'code' => '邀请码',
+            'page' => '页码',
+            'pageSize' => '页数'
+返回结构:
+{
+
+	"code": 200,
+    "msg": , 
+    "data": , 
+
+}
+{
+    "count": 1,
+    "data": [
+        {
+            "id": 1,
+            "agency_id": 3,
+            "money": "123.00",
+            "action": "搜索",
+            "created_at": "2018-11-15 03:03",
+            "updated_at": "2018-11-26 16:50"
+        }
+    ],
+    "msg": "佣金记录",
     "code": 200
 }
