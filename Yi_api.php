@@ -1041,7 +1041,7 @@ http:// http://mp.whrango.com/api/agency/trade_list
 代理的确认签约，缴费
 请求地址: 
 http:// http://mp.whrango.com/api/agency/trade_list
-请求参数：
+请求参数： 'code' => '代理的邀请码',
             'order_id' => '订单id',
             'status' => '订单状态',  2，签约完成，3，缴费完成
 
