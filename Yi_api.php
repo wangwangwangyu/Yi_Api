@@ -1002,3 +1002,59 @@ user_id
     "msg": "还没有教练",
     "code": 200
 }
+/****************************************************************************************/
+代理的学员
+请求地址: 
+http:// http://mp.whrango.com/api/agency/trade_list
+请求参数：
+           'code' => '邀请码',
+            'status' => '订单状态',
+            'page' => '页码',
+            'pageSize' => '页数'
+
+返回结构:
+{
+
+	 "data":
+	"code": 200,
+    "msg": , 
+
+}
+示例：
+{
+    "post_url": "http://mp.whrango.com/api/agency/edit_trade_status",
+    "msg": "请求成功",
+    "data": [
+        {
+            "id": 19,
+            "realname": "旺二哥",
+            "phone": 15958927178,
+            "created_at": "2018-10-25 23:28",
+            "status": 1,
+            "order_status": "待签约"
+        },
+       
+    ],
+    "count": 5,
+    "code": 200
+}
+代理的确认签约，缴费
+请求地址: 
+http:// http://mp.whrango.com/api/agency/trade_list
+请求参数：
+            'order_id' => '订单id',
+            'status' => '订单状态',  2，签约完成，3，缴费完成
+
+返回结构:
+{
+
+	"code": 200,
+    "msg": , 
+
+}
+示例：
+{
+   
+    "msg": "编辑订单成功",
+    "code": 200
+}
