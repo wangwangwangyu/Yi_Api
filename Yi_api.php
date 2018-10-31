@@ -1042,8 +1042,12 @@ http:// http://mp.whrango.com/api/agency/trade_list
 代理的确认签约，缴费
 请求地址: 
 http:// http://mp.whrango.com/api/agency/trade_list
+<<<<<<< HEAD
 请求参数：
          'code' => '代理的邀请码',
+=======
+请求参数： 'code' => '代理的邀请码',
+>>>>>>> fbadb4935c51202ff593828cccbf5a33a4f53cd9
             'order_id' => '订单id',
             'status' => '订单状态',  2，签约完成，3，缴费完成
 
@@ -1060,6 +1064,7 @@ http:// http://mp.whrango.com/api/agency/trade_list
     "msg": "编辑订单成功",
     "code": 200
 }
+<<<<<<< HEAD
 //——————————————————————
 代理主页订单数量显示
 请求地址: 
@@ -1185,3 +1190,5 @@ http:// http://mp.whrango.com/api/agency/commission_history
     "msg": "佣金记录",
     "code": 200
 }
+=======
+>>>>>>> fbadb4935c51202ff593828cccbf5a33a4f53cd9
