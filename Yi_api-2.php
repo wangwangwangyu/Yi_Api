@@ -190,7 +190,7 @@ https://www.guaikakeji.com/api/coach/end_students
 }
 
 //—————————————————————学员学车进度
-https://www.guaikakeji.com/api/coach/check_students
+https://www.guaikakeji.com/api/coach/check_student
 
 'coach_id'=>'教练id'
 'user_id'=>'用户ID'
