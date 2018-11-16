@@ -454,3 +454,192 @@ https://www.guaikakeji.com/api/coach/my_lesson
     "code": 200,
     "msg": "参与学员"
 }
+
+//——用户可选择的预约
+https://www.guaikakeji.com/api/subject/make_subjectapply
+
+ 'user_id' => '用户id',
+
+返回结构:
+{
+
+    "code": 201,
+    "msg": , 
+     "data": , 
+}
+
+示例：{
+{
+    "count": 0,
+    "code": 201,
+    "msg": "没有可选的预约",
+    "data": ""
+}
+
+{
+    "count": 3,
+    "code": 200,
+    "msg": "有可选的预约",
+    "data": [
+        {
+            "coach_name": "郑飞",
+            "coach_phone": 18162718162,
+            "day": "2018-11-20上午",
+            "subject_id": 13,
+            "subject_item_id": 1,
+            "subject_name": "压离合",
+            "subject_place": "江夏大型训练基地",
+            "subject_type": "科目二"
+        },
+        {
+            "coach_name": "郑飞",
+            "coach_phone": 18162718162,
+            "day": "2018-11-21下午",
+            "subject_id": 14,
+            "subject_item_id": 1,
+            "subject_name": "压离合",
+            "subject_place": "武汉工商校内训练场",
+            "subject_type": "科目二"
+        },
+        {
+            "coach_name": "郑飞",
+            "coach_phone": 18162718162,
+            "day": "2018-11-22上午",
+            "subject_id": 15,
+            "subject_item_id": 5,
+            "subject_name": "直角转弯",
+            "subject_place": "武汉科技大学大型训练场",
+            "subject_type": "科目二"
+        }
+    ]
+}
+
+//——用户提交预约
+https://www.guaikakeji.com/api/subject/make_subjectapply
+
+ 'user_id' => '用户id',
+ 'subject_apply_id' => '教练的发布id',
+
+
+返回结构:
+{
+
+    "code": 200,
+    "msg": , 
+
+}
+
+示例：{
+    "code": 201,
+    "msg": "预约失败了"
+}
+
+//——用户取消预约
+https://www.guaikakeji.com/api/subject/del_subjectapply
+
+ 'subject_apply_id' => '预约订单ID',
+
+
+返回结构:
+{
+
+    "code": 201,
+    "msg": , 
+
+}
+
+示例：{
+    "code": 200,
+    "msg": "取消成功"
+}
+//——用户学车进程
+https://www.guaikakeji.com/api/user/process
+
+ 'user_id' => '用户ID',
+
+
+返回结构:
+{
+
+    "code": 200,
+    "msg": , 
+    "data":,
+
+}
+
+示例：
+1,{
+    "data": {
+        "over": 9,
+        "ready": {
+            "code": 9,
+            "time": ""
+        },
+        "lesson_1": 9,
+        "lesson_2": 9,
+        "lesson_3": 9,
+        "lesson_4": 9,
+        "is_subject_1": 9,
+        "is_subject_2": 9,
+        "is_subject_3": 9,
+        "is_subject_4": 9
+    },
+    "msg": "获取成功",
+    "code": 200
+}
+2,{
+    "data": {
+        "over": 9,   // 拿证成功
+        "ready": {   //报名成功（付款成功）
+            "code": 1,
+            "time": "2018年11月09日"
+        },
+        "lesson_1": 1,
+        "lesson_2": 1,
+        "lesson_3": 9,
+        "lesson_4": 9,
+        "is_subject_1": 1,
+        "is_subject_2": 9,
+        "is_subject_3": 9,
+        "is_subject_4": 9,
+        "is_exam": 1
+    },
+    "msg": "获取成功",
+    "code": 200
+}
+//——用户学可科目二的预约
+https://www.guaikakeji.com/api/user/subject_two
+
+ 'user_id' => '用户ID',
+ 'type'=>'科目' ，2 科二，3 科三
+ 返回结构：
+ 示例：{
+    "count": ,
+    "del_url": ,
+    "code": 200,
+    "msg": "",
+    "data": 
+}
+示例：{
+    "count": 18,
+    "del_url": "https://www.guaikakeji.com/api/subject/del_subjectapply",
+    "code": 200,
+    "msg": "科二的预约",
+    "data": [
+        {
+            "subject_apply_id": 25,
+            "day": "2018-11-19下午",
+            "place": "武汉科技大学大型训练场",
+            "coach_2": "郑飞",
+            "status": "预约中"
+        },
+        {
+            "subject_apply_id": 30,
+            "day": "2018-11-18下午",
+            "place": "武汉科技大学大型训练场",
+            "coach_2": "郑飞",
+            "status": "预约中"
+        },
+ 
+    ]
+}
