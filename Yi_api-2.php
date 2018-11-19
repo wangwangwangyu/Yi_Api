@@ -607,8 +607,8 @@ https://www.guaikakeji.com/api/user/process
     "msg": "获取成功",
     "code": 200
 }
-//——用户学可科目二的预约
-https://www.guaikakeji.com/api/user/subject_two
+//——用户的预约  /预约成功还没有去的预约
+https://www.guaikakeji.com/api/user/user_subjectapply
 
  'user_id' => '用户ID',
  'type'=>'科目' ，2 科二，3 科三
