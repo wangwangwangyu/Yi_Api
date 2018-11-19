@@ -44,20 +44,21 @@ https://www.guaikakeji.com/api/coach/my_students
     "data": [
         {
             "title": "当前学员",
-            "post_url": "https://www.guaikakeji.com/api/coach/ing_students"
+            "post_url": "https://www.guaikakeji.com/api/coach/students"
         },
         {
             "title": "往期学员",
-            "post_url": "https://www.guaikakeji.com/api/coach/end_students"
+            "post_url": "https://www.guaikakeji.com/api/coach/students"
         }
     ]
 }
 
 
 
-//—————————————————————当前学员
-https://www.guaikakeji.com/api/coach/ing_students
+//—————————————————————教练的学员
+https://www.guaikakeji.com/api/coach/students
 
+'in_pro'=>'当前学员/往期学员'  9，往期学员 1，当前学员
 'coach_id'=>'教练id'
 返回结构:
 {
@@ -122,72 +123,6 @@ https://www.guaikakeji.com/api/coach/ing_students
     }
 }
 
-//—————————————————————过往学员
-https://www.guaikakeji.com/api/coach/end_students
-
-'coach_id'=>'教练id'
-返回结构:
-{
-
-    "code": 201,
-    "msg": , 
-     "data": , 
-}
-
-示例：{
-    "code": 200,
-    "msg": "请求成功",
-    "data": {
-        "subject_2": [
-            {
-                "realname": "旺X",
-                "phone": 15958927172,
-                "trade_id": 173,
-                "user_id": 41,
-                "subject_type": "科目二",
-                "check": "查看进度",
-                "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-            },
-            {
-                "realname": "郑飞",
-                "phone": 18162718162,
-                "trade_id": 171,
-                "user_id": 40,
-                "subject_type": "科目二",
-                "check": "查看进度",
-                "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-            }
-        ],
-        "subject_3": [
-            {
-                "realname": "何恒兆",
-                "phone": 13007111605,
-                "trade_id": 172,
-                "user_id": 42,
-                "subject_type": "科目三",
-                "check": "查看进度",
-                "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-            },
-            {
-                "realname": "郑飞",
-                "phone": 18162718162,
-                "trade_id": 171,
-                "user_id": 40,
-                "subject_type": "科目三",
-                "check": "查看进度",
-                "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-            }
-        ]
-    }
-}
-，{
-    "code": 200,
-    "msg": "请求成功",
-    "data": {
-        "subject_3": [],
-        "subject_2": []
-    }
-}
 
 //—————————————————————学员学车进度
 https://www.guaikakeji.com/api/coach/check_student
