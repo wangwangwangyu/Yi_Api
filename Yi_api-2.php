@@ -60,6 +60,9 @@ https://www.guaikakeji.com/api/coach/students
 
 'in_pro'=>'当前学员/往期学员'  9，往期学员 1，当前学员
 'coach_id'=>'教练id'
+'subject_type'=>'科目分类' 2，科二， 3， 科三
+'page'=>'页码'
+'pageSize'=>'页数'
 返回结构:
 {
 
@@ -69,51 +72,32 @@ https://www.guaikakeji.com/api/coach/students
 }
 
 示例：{
-    "code": 200,
-    "msg": "请求成功",
-    "data": {
-        "subject_2": [
-            {
-                "realname": "旺X",
-                "phone": 15958927172,
-                "trade_id": 173,
-                "user_id": 41,
-                "subject_type": "科目二",
-                "check": "查看",
-                "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-            },
-            {
-                "realname": "郑飞",
-                "phone": 18162718162,
-                "trade_id": 171,
-                "user_id": 40,
-                "subject_type": "科目二",
-                "check": "查看",
-                "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-            }
-        ],
-        "subject_3": [
-            {
-                "realname": "何恒兆",
-                "phone": 13007111605,
-                "trade_id": 172,
-                "user_id": 42,
-                "subject_type": "科目三",
-                "check": "查看",
-                "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-            },
-            {
-                "realname": "郑飞",
-                "phone": 18162718162,
-                "trade_id": 171,
-                "user_id": 40,
-                "subject_type": "科目三",
-                "check": "查看",
-                "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-            }
-        ]
-    }
+
+    "msg": "当前学员",
+    "count": 2,
+    "data": [
+        {
+            "realname": "旺X",
+            "phone": 15958927172,
+            "trade_id": 173,
+            "user_id": 41,
+            "subject_type": "科目二",
+            "check": "查看",
+            "check_url": "https://www.guaikakeji.com/api/coach/check_student"
+        },
+        {
+            "realname": "郑飞",
+            "phone": 18162718162,
+            "trade_id": 171,
+            "user_id": 40,
+            "subject_type": "科目二",
+            "check": "查看",
+            "check_url": "https://www.guaikakeji.com/api/coach/check_student"
+        }
+    ],
+    "code": 200
 }
+     
 ，{
     "code": 200,
     "msg": "请求成功",
