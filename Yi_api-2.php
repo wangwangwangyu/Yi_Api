@@ -613,3 +613,24 @@ https://www.guaikakeji.com/api/coach/add_subject
     "msg": "新增成功"
 }
 
+//——教练确认学员科目通过情况（科目进度）
+https://www.guaikakeji.com/api/coach/edit_students_subject
+                'coach_id'=>'教练',
+                'subject'=>'2/3'  2，科二 3，科三
+                'user_id'=>'学员ID'
+               
+ 返回结构：
+ 示例：{
+
+    "code": 200,
+    "msg": "",
+  
+}
+示例：{
+    
+{
+   
+    "code": 200,
+    "msg": "修改成功"
+}
+
