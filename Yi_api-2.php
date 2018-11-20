@@ -94,14 +94,6 @@ https://www.guaikakeji.com/api/coach/students
     "code": 200
 }
      
-，{
-    "code": 200,
-    "msg": "请求成功",
-    "data": {
-        "subject_3": [],
-        "subject_2": []
-    }
-}
 
 
 //—————————————————————学员学车进度
@@ -556,5 +548,30 @@ https://www.guaikakeji.com/api/user/user_subjectapply
             "status": "预约中"
         },
  
+    ]
+}
+//——驾照类别
+https://www.guaikakeji.com/api/common/meal_cate
+
+ 返回结构：
+ 示例：{
+
+    "code": 200,
+    "msg": "",
+    "data": 
+}
+示例：{
+    
+    "code": 200,
+    "msg": "教照类别",
+    "data": [
+        {
+            "id": 1,
+            "title": "C1"
+        },
+        {
+            "id": 2,
+            "title": "C2"
+        },
     ]
 }
