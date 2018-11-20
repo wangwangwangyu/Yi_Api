@@ -575,3 +575,106 @@ https://www.guaikakeji.com/api/common/meal_cate
         },
     ]
 }
+
+//——发布课程表单
+https://www.guaikakeji.com/api/coach/add_form
+'coach_id'=>教练id
+ 返回结构：
+ 示例：{
+
+    "code": 200,
+    "msg": "",
+    "data": 
+}
+示例：{
+    
+{
+    "data": {
+        "place": [
+            {
+                "id": 9,
+                "name": "武汉科技大学大型训练场"
+            },
+            {
+                "id": 10,
+                "name": "武纺后街训练场"
+            },
+            {
+                "id": 11,
+                "name": "江夏大型训练基地"
+            },
+            {
+                "id": 12,
+                "name": "武汉工商校内训练场"
+            }
+        ],
+        "subject_item": [
+            {
+                "id": 1,
+                "title": "压离合",
+                "type": 2,
+                "cate_id": 1,
+                "max": 5,
+                "order": 1,
+                "type_name": "科目二",
+                "cate_name": "C1"
+            },
+   
+            {
+                "id": 10,
+                "title": "直线加速",
+                "type": 3,
+                "cate_id": 1,
+                "max": 2,
+                "order": 1,
+                "type_name": "科目三",
+                "cate_name": "C1"
+            },
+          
+        ]
+    },
+    "code": 200,
+    "msg": "发布表单"
+}
+//——教练删除课程
+https://www.guaikakeji.com/api/coach/del_subject
+                'subject_id'=>'发布的Id',
+                
+ 返回结构：
+ 示例：{
+
+    "code": 200,
+    "msg": "",
+  
+}
+示例：{
+    
+{
+   
+    "code": 200,
+    "msg": "删除成功"
+}
+
+//——教练发布课程
+https://www.guaikakeji.com/api/coach/add_subject
+                'coach_id'=>'教练',
+                'day_time' => '练车时间段', 1,上午，2 下午
+                'subject_item_id' => '练习项目',
+                'max_number'=>'可预约人数',
+                'day' => '练车日期',
+                'place_id' => '练习地址',
+ 返回结构：
+ 示例：{
+
+    "code": 200,
+    "msg": "",
+  
+}
+示例：{
+    
+{
+   
+    "code": 200,
+    "msg": "新增成功"
+}
+
