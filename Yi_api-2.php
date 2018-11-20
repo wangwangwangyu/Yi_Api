@@ -238,72 +238,7 @@ https://www.guaikakeji.com/api/coach/my_lesson
             "edit_url": "https://www.guaikakeji.com/api/coach/edit_subject",
             "del_url": "https://www.guaikakeji.com/api/coach/del_subject"
         },
-        {
-            "type": "下午2:00-5:00",
-            "day": "2018年11月17日 ",
-            "place": "武汉科技大学大型训练场",
-            "max_number": 2,
-            "number": 2,
-            "id": 4,
-            "check_url": "https://www.guaikakeji.com/api/coach/subject_info",
-            "edit_url": "https://www.guaikakeji.com/api/coach/edit_subject",
-            "del_url": "https://www.guaikakeji.com/api/coach/del_subject"
-        },
-        {
-            "type": "下午2:00-5:00",
-            "day": "2018年11月16日 ",
-            "place": "武汉科技大学大型训练场",
-            "max_number": 2,
-            "number": 2,
-            "id": 8,
-            "check_url": "https://www.guaikakeji.com/api/coach/subject_info",
-            "edit_url": "https://www.guaikakeji.com/api/coach/edit_subject",
-            "del_url": "https://www.guaikakeji.com/api/coach/del_subject"
-        },
-        {
-            "type": "下午2:00-5:00",
-            "day": "2018年11月18日 ",
-            "place": "武汉科技大学大型训练场",
-            "max_number": 2,
-            "number": 3,
-            "id": 9,
-            "check_url": "https://www.guaikakeji.com/api/coach/subject_info",
-            "edit_url": "https://www.guaikakeji.com/api/coach/edit_subject",
-            "del_url": "https://www.guaikakeji.com/api/coach/del_subject"
-        },
-        {
-            "type": "下午2:00-5:00",
-            "day": "2018年11月21日 ",
-            "place": "武汉科技大学大型训练场",
-            "max_number": 2,
-            "number": 2,
-            "id": 11,
-            "check_url": "https://www.guaikakeji.com/api/coach/subject_info",
-            "edit_url": "https://www.guaikakeji.com/api/coach/edit_subject",
-            "del_url": "https://www.guaikakeji.com/api/coach/del_subject"
-        },
-        {
-            "type": "下午2:00-5:00",
-            "day": "2018年11月19日 ",
-            "place": "武汉科技大学大型训练场",
-            "max_number": 2,
-            "number": 2,
-            "id": 12,
-            "check_url": "https://www.guaikakeji.com/api/coach/subject_info",
-            "edit_url": "https://www.guaikakeji.com/api/coach/edit_subject",
-            "del_url": "https://www.guaikakeji.com/api/coach/del_subject"
-        },
-        {
-            "type": "下午2:00-5:00",
-            "day": "2018年11月20日 ",
-            "place": "江夏大型训练基地",
-            "max_number": 4,
-            "number": 0,
-            "id": 13,
-            "check_url": "https://www.guaikakeji.com/api/coach/subject_info",
-            "edit_url": "https://www.guaikakeji.com/api/coach/edit_subject",
-            "del_url": "https://www.guaikakeji.com/api/coach/del_subject"
-        }
+   
     ]
 }
 
@@ -363,7 +298,7 @@ https://www.guaikakeji.com/api/coach/my_lesson
 }
 
 //——用户可选择的预约
-https://www.guaikakeji.com/api/subject/make_subjectapply
+https://www.guaikakeji.com/api/subject/user_subjects
 
  'user_id' => '用户id',
 
