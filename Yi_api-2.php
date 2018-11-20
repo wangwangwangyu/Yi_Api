@@ -63,33 +63,29 @@ https://www.guaikakeji.com/api/coach/students
 'subject_type'=>'科目分类' 2，科二， 3， 科三
 'page'=>'页码'
 'pageSize'=>'页数'
+'trade_cate'=>'C1/C2' 驾照级别
+'realname'=> 姓名搜索，
+'phone'=> 电话搜素
 返回结构:
 {
 
     "code": 201,
     "msg": , 
      "data": , 
+     "count":
 }
 
 示例：{
-
     "msg": "当前学员",
-    "count": 2,
+    "count": 1,
     "data": [
         {
             "realname": "旺X",
             "phone": 15958927172,
             "trade_id": 173,
             "user_id": 41,
-            "subject_type": "科目二",
-            "check": "查看",
-            "check_url": "https://www.guaikakeji.com/api/coach/check_student"
-        },
-        {
-            "realname": "郑飞",
-            "phone": 18162718162,
-            "trade_id": 171,
-            "user_id": 40,
+            "meal_id": 2,
+            "trade_cate": "C1",
             "subject_type": "科目二",
             "check": "查看",
             "check_url": "https://www.guaikakeji.com/api/coach/check_student"
