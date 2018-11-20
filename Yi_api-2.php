@@ -616,7 +616,7 @@ https://www.guaikakeji.com/api/coach/add_subject
 //——教练确认学员科目通过情况（科目进度）
 https://www.guaikakeji.com/api/coach/edit_students_subject
                 'coach_id'=>'教练',
-                'subject'=>'2/3'  2，科二 3，科三
+                'is_subject'=>'2/3'  2，科二 3，科三
                 'user_id'=>'学员ID'
                
  返回结构：
