@@ -120,57 +120,134 @@ https://www.guaikakeji.com/api/coach/check_student
 
 示例：
 {
-	"student": {
+    "student": {
         "name": "郑飞",
-        "user_id": 40
+        "user_id": 40,
+        "is_subject_1": 1,
+        "is_subject_2": 9,
+        "is_subject_3": 9,
+        "is_subject_4": 9
     },
     "data": {
-        "subject_2": [
-            {
-                "id": 1,
-                "title": "压离合",
-                "type": 2,
-                "cate_id": 1,
-                "max": 5,
-                "order": 1,
-                "subject_item_times": 0,  //练习项目的练习次数
-                "subject_item_type": "科目二",
-                "exercise_time": 9     //练习项目的练习时长
-            },
-            {
-                "id": 2,
-                "title": "倒车入库",
-                "type": 2,
-                "cate_id": 1,
-                "max": 5,
-                "order": 2,
-                "subject_item_times": 0,
-                "subject_item_type": "科目二",
-                "exercise_time": 3
-            },
-            {
-                "id": 3,
-                "title": "侧方停车",
-                "type": 2,
-                "cate_id": 1,
-                "max": 5,
-                "order": 3,
-                "subject_item_times": 0,
-                "subject_item_type": "科目二",
-                "exercise_time": 0
-            },
-        ],
-        "subject_3": []
+        "subject_2": {
+            "total_exercise_time": "12小时",
+            "list": [
+                {
+                    "id": 1,
+                    "title": "压离合",
+                    "type": 2,
+                    "cate_id": 1,
+                    "max": 5,
+                    "order": 1,
+                    "subject_item_times": 0,
+                    "subject_item_type": "科目二",
+                    "exercise_time": 9
+                },
+                {
+                    "id": 2,
+                    "title": "倒车入库",
+                    "type": 2,
+                    "cate_id": 1,
+                    "max": 5,
+                    "order": 2,
+                    "subject_item_times": 0,
+                    "subject_item_type": "科目二",
+                    "exercise_time": 3
+                },
+                {
+                    "id": 3,
+                    "title": "侧方停车",
+                    "type": 2,
+                    "cate_id": 1,
+                    "max": 5,
+                    "order": 3,
+                    "subject_item_times": 0,
+                    "subject_item_type": "科目二",
+                    "exercise_time": 0
+                },
+                {
+                    "id": 4,
+                    "title": "山坡起步",
+                    "type": 2,
+                    "cate_id": 1,
+                    "max": 5,
+                    "order": 4,
+                    "subject_item_times": 0,
+                    "subject_item_type": "科目二",
+                    "exercise_time": 0
+                },
+                {
+                    "id": 5,
+                    "title": "直角转弯",
+                    "type": 2,
+                    "cate_id": 1,
+                    "max": 5,
+                    "order": 5,
+                    "subject_item_times": 0,
+                    "subject_item_type": "科目二",
+                    "exercise_time": 0
+                },
+                {
+                    "id": 6,
+                    "title": "S路",
+                    "type": 2,
+                    "cate_id": 1,
+                    "max": 6,
+                    "order": 6,
+                    "subject_item_times": 0,
+                    "subject_item_type": "科目二",
+                    "exercise_time": 0
+                }
+            ]
+        },
+        "subject_3": {
+            "total_exercise_time": "3小时",
+            "list": [
+                {
+                    "id": 10,
+                    "title": "直线加速",
+                    "type": 3,
+                    "cate_id": 1,
+                    "max": 2,
+                    "order": 1,
+                    "subject_item_times": 1,
+                    "subject_item_type": "科目三",
+                    "exercise_time": 3
+                },
+                {
+                    "id": 13,
+                    "title": "加减档操作",
+                    "type": 3,
+                    "cate_id": 1,
+                    "max": 5,
+                    "order": 2,
+                    "subject_item_times": 0,
+                    "subject_item_type": "科目三",
+                    "exercise_time": 0
+                },
+                {
+                    "id": 14,
+                    "title": "变更车道",
+                    "type": 3,
+                    "cate_id": 1,
+                    "max": 5,
+                    "order": 3,
+                    "subject_item_times": 0,
+                    "subject_item_type": "科目三",
+                    "exercise_time": 0
+                }
+            ]
+        }
     },
     "code": 200,
     "msg": "查到信息"
 }
-
 {
     "data": {
         "subject_2": [],
         "subject_3": []
     },
+    'student':''
     "code": 200,
     "msg": "查到信息"
 }
