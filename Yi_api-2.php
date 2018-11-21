@@ -359,7 +359,7 @@ https://www.guaikakeji.com/api/coach/my_lesson
     "msg": "参与学员"
 }
 
-//——用户可选择的预约
+//——用户可选择的教练发布的预约
 https://www.guaikakeji.com/api/subject/user_subjects
 
  'user_id' => '用户id',
@@ -385,36 +385,21 @@ https://www.guaikakeji.com/api/subject/user_subjects
     "code": 200,
     "msg": "有可选的预约",
     "data": [
-        {
-            "coach_name": "郑飞",
-            "coach_phone": 18162718162,
-            "day": "2018-11-20上午",
-            "subject_id": 13,
-            "subject_item_id": 1,
-            "subject_name": "压离合",
-            "subject_place": "江夏大型训练基地",
-            "subject_type": "科目二"
+         {
+            "coach_name": "张锦飞",
+            "coach_phone": 18012416742,
+            "day": "2018-11-24上午",
+            "subject_id": 16,
+            "subject_place": "武汉科技大学大型训练场"
         },
         {
-            "coach_name": "郑飞",
-            "coach_phone": 18162718162,
-            "day": "2018-11-21下午",
-            "subject_id": 14,
-            "subject_item_id": 1,
-            "subject_name": "压离合",
-            "subject_place": "武汉工商校内训练场",
-            "subject_type": "科目二"
+            "coach_name": "张锦飞",
+            "coach_phone": 18012416742,
+            "day": "2018-11-24下午",
+            "subject_id": 17,
+            "subject_place": "武汉科技大学大型训练场"
         },
-        {
-            "coach_name": "郑飞",
-            "coach_phone": 18162718162,
-            "day": "2018-11-22上午",
-            "subject_id": 15,
-            "subject_item_id": 5,
-            "subject_name": "直角转弯",
-            "subject_place": "武汉科技大学大型训练场",
-            "subject_type": "科目二"
-        }
+     
     ]
 }
 
@@ -422,7 +407,11 @@ https://www.guaikakeji.com/api/subject/user_subjects
 https://www.guaikakeji.com/api/subject/make_subjectapply
 
  'user_id' => '用户id',
- 'subject_apply_id' => '教练的发布id',
+ 'subject_item_id' => '练习项目id',
+ 'subject_id' => '教练的发布id',
+                 'subject_type' => '科目',
+
+
 
 
 返回结构:
@@ -512,7 +501,7 @@ https://www.guaikakeji.com/api/user/process
     "code": 200
 }
 //——用户的预约（我的课程）  /预约成功还没有去的预约
-https://www.guaikakeji.com/api/user/user_subjectapply
+https://www.guaikakeji.com/api/subject/user_subjectapply
 
  'user_id' => '用户ID',
  'type'=>'科目' ，2 科二，3 科三
@@ -656,7 +645,7 @@ https://www.guaikakeji.com/api/coach/del_subject
 https://www.guaikakeji.com/api/coach/add_subject
                 'coach_id'=>'教练',
                 'day_time' => '练车时间段', 1,上午，2 下午
-                'subject_item_id' => '练习项目',
+                // 'subject_item_id' => '练习项目',
                 'max_number'=>'可预约人数',
                 'day' => '练车日期',
                 'place_id' => '练习地址',
