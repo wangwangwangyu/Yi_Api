@@ -359,8 +359,51 @@ https://www.guaikakeji.com/api/coach/my_lesson
     "msg": "参与学员"
 }
 
-//——用户可选择的教练发布的预约
+
+
+
+//——用户可选择的教练发布的预约（训练时间）
 https://www.guaikakeji.com/api/subject/user_subjects
+ 'user_id' => '用户id',
+
+返回结构:
+{
+
+    "code": 201,
+    "msg": , 
+     "data": ,
+     'count' :
+}
+
+示例：
+ {
+    "count": 5,
+    "code": 200,
+    "msg": "有可选的预约",
+    "data": [
+       {
+            "coach_name": "张锦飞",
+            "coach_phone": 18012416742,
+            "day": "2018-11-24上午",
+            "subject_id": 16,
+            "subject_place": "武汉科技大学大型训练场",
+            "subject_place_id": 9
+        },
+        {
+            "coach_name": "张锦飞",
+            "coach_phone": 18012416742,
+            "day": "2018-11-24下午",
+            "subject_id": 17,
+            "subject_place": "武汉科技大学大型训练场",
+            "subject_place_id": 9
+        },
+        
+    ]
+}
+
+
+//——用户可选择的教练发布的预约（训练项目）
+https://www.guaikakeji.com/api/subject/user_subject_item
 
  'user_id' => '用户id',
 
@@ -379,37 +422,44 @@ https://www.guaikakeji.com/api/subject/user_subjects
     "msg": "没有可选的预约",
     "data": ""
 }
-
 {
+    "msg": "科目三",
     "count": 3,
     "code": 200,
-    "msg": "有可选的预约",
     "data": [
-         {
-            "coach_name": "张锦飞",
-            "coach_phone": 18012416742,
-            "day": "2018-11-24上午",
-            "subject_id": 16,
-            "subject_place": "武汉科技大学大型训练场"
+        {
+            "id": 10,
+            "title": "直线加速",
+            "type": 3,
+            "cate_id": 1,
+            "max": 2,
+            "order": 1
         },
         {
-            "coach_name": "张锦飞",
-            "coach_phone": 18012416742,
-            "day": "2018-11-24下午",
-            "subject_id": 17,
-            "subject_place": "武汉科技大学大型训练场"
+            "id": 13,
+            "title": "加减档操作",
+            "type": 3,
+            "cate_id": 1,
+            "max": 5,
+            "order": 2
         },
-     
+        {
+            "id": 14,
+            "title": "变更车道",
+            "type": 3,
+            "cate_id": 1,
+            "max": 5,
+            "order": 3
+        }
     ]
 }
-
 //——用户提交预约
 https://www.guaikakeji.com/api/subject/make_subjectapply
 
  'user_id' => '用户id',
  'subject_item_id' => '练习项目id',
  'subject_id' => '教练的发布id',
-                 'subject_type' => '科目',
+        'subject_type' => '科目',
 
 
 
@@ -444,6 +494,42 @@ https://www.guaikakeji.com/api/subject/del_subjectapply
 示例：{
     "code": 200,
     "msg": "取消成功"
+}
+
+//——用户的预约  (我的课程)
+https://www.guaikakeji.com/api/subject/user_subjectapply
+
+ 'user_id' => '用户ID',
+ 'type'=>'科目' ，2 科二，3 科三
+ 返回结构：
+ 示例：{
+    "count": ,
+    "del_url": ,
+    "code": 200,
+    "msg": "",
+    "data": 
+}
+示例：{
+    "msg": "科目二",
+    "count": 8,
+    "del_url": "https://www.guaikakeji.com/api/subject/del_subjectapply",
+    "code": 200,
+    "data": [
+        {
+            "day": "2018年11月25日 ,下午2:00-5:00",
+            "place": "武汉科技大学大型训练场",
+            "is_active": "预约中",
+            "subject_apply_id": 48,
+            "coach_phone": 18012416742
+        },
+        {
+            "day": "2018年11月25日 ,上午8:00-11:00",
+            "place": "武汉科技大学大型训练场",
+            "is_active": "预约中",
+            "subject_apply_id": 47,
+            "coach_phone": 18012416742
+        },
+    ]
 }
 //——用户学车进程
 https://www.guaikakeji.com/api/user/process
@@ -499,42 +585,6 @@ https://www.guaikakeji.com/api/user/process
     },
     "msg": "获取成功",
     "code": 200
-}
-//——用户的预约（我的课程）  /预约成功还没有去的预约
-https://www.guaikakeji.com/api/subject/user_subjectapply
-
- 'user_id' => '用户ID',
- 'type'=>'科目' ，2 科二，3 科三
- 返回结构：
- 示例：{
-    "count": ,
-    "del_url": ,
-    "code": 200,
-    "msg": "",
-    "data": 
-}
-示例：{
-    "count": 18,
-    "del_url": "https://www.guaikakeji.com/api/subject/del_subjectapply",
-    "code": 200,
-    "msg": "科二的预约",
-    "data": [
-        {
-            "subject_apply_id": 25,
-            "day": "2018-11-19下午",
-            "place": "武汉科技大学大型训练场",
-            "coach_2": "郑飞",
-            "status": "预约中"
-        },
-        {
-            "subject_apply_id": 30,
-            "day": "2018-11-18下午",
-            "place": "武汉科技大学大型训练场",
-            "coach_2": "郑飞",
-            "status": "预约中"
-        },
- 
-    ]
 }
 //——驾照类别
 https://www.guaikakeji.com/api/common/meal_cate
