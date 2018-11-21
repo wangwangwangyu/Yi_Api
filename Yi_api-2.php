@@ -114,11 +114,16 @@ https://www.guaikakeji.com/api/coach/check_student
     "code": 201,
     "msg": , 
      "data": , 
+     'student'
 }
 
 
 示例：
 {
+	"student": {
+        "name": "郑飞",
+        "user_id": 40
+    },
     "data": {
         "subject_2": [
             {
