@@ -547,42 +547,19 @@ https://www.guaikakeji.com/api/user/process
 }
 
 示例：
-1,{
+{
     "data": {
-        "over": 9,
-        "ready": {
-            "code": 9,
-            "time": ""
-        },
-        "lesson_1": 9,
-        "lesson_2": 9,
-        "lesson_3": 9,
-        "lesson_4": 9,
-        "is_subject_1": 9,
-        "is_subject_2": 9,
-        "is_subject_3": 9,
-        "is_subject_4": 9
-    },
-    "msg": "获取成功",
-    "code": 200
-}
-2,{
-    "data": {
-        "over": 9,   // 拿证成功
-        "ready": {   //报名成功（付款成功）
-            "code": 1,
-            "time": "2018年11月09日"
-        },
-        "lesson_1": 1,
-        "lesson_2": 1,
-        "lesson_3": 9,
-        "lesson_4": 9,
+        "ready": 1,
+        "pay_time": "2018年11月15日",
         "is_subject_1": 1,
         "is_subject_2": 9,
         "is_subject_3": 9,
         "is_subject_4": 9,
         "is_exam": 1
     },
+    "msg": "获取成功",
+    "code": 200
+}
     "msg": "获取成功",
     "code": 200
 }
@@ -695,7 +672,7 @@ https://www.guaikakeji.com/api/coach/del_subject
 https://www.guaikakeji.com/api/coach/add_subject
                 'coach_id'=>'教练',
                 'day_time' => '练车时间段', 1,上午，2 下午
-                // 'subject_item_id' => '练习项目',
+                'subject_type' => '练习科目', 2，3
                 'max_number'=>'可预约人数',
                 'day' => '练车日期',
                 'place_id' => '练习地址',
@@ -735,3 +712,47 @@ https://www.guaikakeji.com/api/coach/edit_students_subject
     "msg": "修改成功"
 }
 
+//——教练确认学员项目通过情况（练习项目进度）
+https://www.guaikakeji.com/api/coach/edit_student_lesson
+                'coach_id'=>'教练',
+               'subject_type'=>'2/3'科目
+               'subject_items'=>{subject_items: ["1", "2", "3", "4", "5", "6"]} 练习项目id
+                'user_id'=>'学员ID'
+               
+ 返回结构：
+ 示例：{
+
+    "code": 200,
+    "msg": "",
+  
+}
+示例：{
+    
+{
+   
+    "code": 200,
+    "msg": "修改成功"
+}
+
+//——教练确认学员科目通过情况（科二科三进度）
+https://www.guaikakeji.com/api/coach/edit_student_subjectx
+
+                'coach_id'=>'教练',
+               'is_subject'=>'2/3'科目
+               'status'=>1,17 ,1通过，17 未过
+                'user_id'=>'学员ID'
+               
+ 返回结构：
+ 示例：{
+
+    "code": 200,
+    "msg": "",
+  
+}
+示例：{
+    
+{
+   
+    "code": 200,
+    "msg": "修改成功"
+}
